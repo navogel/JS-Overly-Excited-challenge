@@ -93,3 +93,24 @@ function addExcitement4(theWordArray, a, times) {
 }
 
 addExcitement4(sentence, "#", 5);
+
+// function to add the punctuation x number of times
+
+const addExcitement5 = (theWordArray, a, times) => {
+	let buildMeUp = "";
+
+	for (let i = 0; i < theWordArray.length; i++) {
+		if ((i + 1) % 3 === 0) {
+			buildMeUp =
+				" " +
+				buildMeUp +
+				" " +
+				theWordArray[i] +
+				repeatStringNumTimes(a, times);
+			document.write(`${buildMeUp} <br>`);
+		} else buildMeUp = " " + buildMeUp + " " + theWordArray[i];
+		document.write(`${buildMeUp} <br>`);
+	}
+};
+
+addExcitement5(sentence, "#", 5);
