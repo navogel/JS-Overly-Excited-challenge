@@ -47,3 +47,19 @@ function addExcitement2(theWordArray) {
 }
 
 addExcitement2(sentence);
+
+// add a punctuation arguement
+
+function addExcitement3(theWordArray, a) {
+	let buildMeUp = "";
+
+	for (let i = 0; i < theWordArray.length; i++) {
+		if ((i + 1) % 3 === 0) {
+			buildMeUp = " " + buildMeUp + " " + theWordArray[i] + a;
+			document.write(`${buildMeUp} <br>`);
+		} else buildMeUp = " " + buildMeUp + " " + theWordArray[i];
+		document.write(`${buildMeUp} <br>`);
+	}
+}
+
+addExcitement3(sentence, "#");
