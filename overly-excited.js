@@ -63,3 +63,33 @@ function addExcitement3(theWordArray, a) {
 }
 
 addExcitement3(sentence, "#");
+
+// add a punctuation arguement + number of time to use it
+
+// Function to repeat a string x number of times
+
+function repeatStringNumTimes(string, times) {
+	if (times > 0) return string.repeat(times);
+	else return "";
+}
+
+// function to add the punctuation x number of times
+
+function addExcitement4(theWordArray, a, times) {
+	let buildMeUp = "";
+
+	for (let i = 0; i < theWordArray.length; i++) {
+		if ((i + 1) % 3 === 0) {
+			buildMeUp =
+				" " +
+				buildMeUp +
+				" " +
+				theWordArray[i] +
+				repeatStringNumTimes(a, times);
+			document.write(`${buildMeUp} <br>`);
+		} else buildMeUp = " " + buildMeUp + " " + theWordArray[i];
+		document.write(`${buildMeUp} <br>`);
+	}
+}
+
+addExcitement4(sentence, "#", 5);
